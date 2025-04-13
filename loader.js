@@ -1,26 +1,22 @@
-(function () {
-  const licenseKey = "iJZc8v7CUUtkpLg0piEun46cSC3Es2U2cH7T24PTZtqijFgYAA";
-  const domain = window.location.hostname.replace("www.", "");
-
-  const licenseFileURL = "https://github.com/digitloyal/qph/blob/main/licenses.json";
+(function() {
+  const licenseKey = "quiz.taiyaarikaro.com";
+  const licenseURL = "https://github.com/digitloyal/qph/blob/main/licenses.json";
   const cssURL = "https://github.com/digitloyal/qph/blob/main/style.css";
 
-  fetch(licenseFileURL)
-    .then(res => res.json())
-    .then(licenses => {
-      const isValid = licenses.some(
-        item => item.key === licenseKey && item.domain === domain
-      );
-
-      if (isValid) {
+  fetch(licenseURL)
+    .then(response => response.json())
+    .then(data => {
+      const validDomains = data.map(entry => entry.key);
+      if (validDomains.includes(licenseKey)) {
         const link = document.createElement("link");
         link.rel = "stylesheet";
         link.href = cssURL;
         document.head.appendChild(link);
-        console.log("✅ License matched. CSS applied.");
       } else {
-        console.warn("❌ License or domain mismatch. CSS not loaded.");
+        console.error("License verification failed.");
       }
     })
-    .catch(error => console.error("Error loading license:", error));
+    .catch(error => {
+      console.error("Error fetching license data:", error);
+    });
 })();
