@@ -1,42 +1,21 @@
 (function () {
-  // सुनिश्चित करें कि यह license key आपकी licenses.json में दिए गए key से मेल खाता है
-  const licenseKey = "iJZc8v7CUUtkpLg0piEun46cSC3Es2U2cH7T24PTZtqijFgYAA";
-  // domain को lowercase और बिना www के प्राप्त करें
-  const domain = window.location.hostname.replace("www.", "").toLowerCase();
-  console.log("Detected Domain:", domain);
+  const LICENSE_URL = "https://raw.githack.com/digitloyal/qph/main/licenses.json";
+  const CSS_URL = "https://raw.githack.com/digitloyal/qph/main/style.css";
+  const CURRENT_DOMAIN = window.location.hostname;
 
-  const licenseFileURL = "https://cdn.jsdelivr.net/gh/digitloyal/qph@main/licenses.json";
-  const cssURL = "https://cdn.jsdelivr.net/gh/digitloyal/qph@main/style.css";
-
-  console.log("Fetching license file from:", licenseFileURL);
-
-  fetch(licenseFileURL)
-    .then(res => {
-      if (!res.ok) {
-        throw new Error("Failed to fetch licenses.json. Status: " + res.status);
-      }
-      return res.json();
-    })
-    .then(licenses => {
-      console.log("Fetched licenses:", licenses);
-      // Check if any license matches the provided licenseKey and domain
-      const isValid = licenses.some(item => {
-        const match = (item.key === licenseKey && item.domain === domain);
-        console.log("Checking license entry:", item, "Match result:", match);
-        return match;
-      });
-
-      if (isValid) {
-        console.log("✅ License validated. Loading CSS from:", cssURL);
+  fetch(LICENSE_URL)
+    .then(res => res.json())
+    .then(data => {
+      const isAllowed = data.some(entry => entry.domain === CURRENT_DOMAIN);
+      if (isAllowed) {
         const link = document.createElement("link");
         link.rel = "stylesheet";
-        link.href = cssURL;
+        link.href = CSS_URL;
         document.head.appendChild(link);
+        console.log("✅ CSS loaded for", CURRENT_DOMAIN);
       } else {
-        console.error("❌ License validation failed. License key or domain mismatch.");
+        console.warn("⛔ Unauthorized domain. CSS not loaded:", CURRENT_DOMAIN);
       }
     })
-    .catch(error => {
-      console.error("Error fetching license file:", error);
-    });
+    .catch(err => console.error("Error fetching license list:", err));
 })();
