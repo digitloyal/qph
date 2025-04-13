@@ -20,6 +20,7 @@
 */
 
 /* feature Menu*/
+.page .entry-content{padding-top:30px!important}
 .feature-menu{padding:5px;text-align:center;position:relative;background:rgb(0 10 100);margin:0 0 28px 0!important;border:1px solid #1a73e8;border-radius:16px 16px 4px 4px}
 .feature-menu p{color:#fff;background:#08f;padding:4px;width:-webkit-fill-available;border:2px solid #E7E5FD;border-radius:10px;display:flex;justify-content:center;align-items:center}
 .feature-menu h2{font-size:1.6em;line-height:1.6em;margin-bottom:0;padding-bottom:0}
