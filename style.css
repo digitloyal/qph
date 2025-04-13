@@ -1,3 +1,23 @@
+/* Add this at the top of your CSS */
+body {
+    display: none;
+}
+
+/* Only show content if license verified */
+.license-verified body {
+    display: block;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    /* etc... */
+}
+
+/* And wrap the rest of your rules like this: */
+.license-verified header { ... }
+.license-verified .feature-menu { ... }
+.license-verified nav a:hover { ... }
+/* etc... */
+
     /* Global Styles */
 
     body {
