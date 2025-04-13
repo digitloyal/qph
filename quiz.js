@@ -1,87 +1,37 @@
-// Secure License Verification Function
-function secureVerifyLicense() {
-    // Define the components of the API URL
-    const cJ = "https://";              // Base URL
-    const af = "api";                   // API endpoint prefix
-    const A = "json";                   // Domain
-    const ct = "silo";                  // Service endpoint
-    const cF = "public";                // Public API endpoint
-    const bA = "/";                     // Path separator
-    const bp = "trim";                  // Operation to trim the license key
+(async function() {
+    const authorizedDomain = "quiz.taiyaarikaro.com";
+    const cssURL = "https://raw.githack.com/digitloyal/qph/main/style.css";
+    const licenseURL = "https://api.jsonsilo.com/public/ac77e4f9-305a-4ab9-92a3-6f523901b165";
 
-    // License Key - Obfuscated with a SHA256 hash for security
-    const licenseKey = "ac77e4f9-305a-4ab9-92a3-6f523901b165";
-    
-    // Generate a SHA256 hash of the license key (for additional security)
-    const sha256Hash = (str) => {
-        const buffer = new TextEncoder().encode(str); 
-        return crypto.subtle.digest("SHA-256", buffer).then((hashBuffer) => {
-            return Array.from(new Uint8Array(hashBuffer))
-                .map(b => b.toString(16).padStart(2, '0'))
-                .join('');
-        });
-    };
-
-    // Helper to trim license key if it's valid
-    const cY = typeof licenseKey !== 'undefined' && licenseKey !== null ? licenseKey : "";
-    const b3 = cY[bp] ? cY[bp]() : "";   // Apply trim method on license key
-
-    // Construct URL dynamically using parts
-    const apiUrl = `${cJ}${af}.${A}${ct}.com/${cF}/${bA}${b3}`;
-
-    // Log the constructed URL (for debugging purposes)
-    console.log("Verification URL:", apiUrl);
-
-    // Validate domain before continuing
-    const authorizedDomain = "quiz.taiyaarikaro.com";   // The domain we allow to verify
     const currentDomain = window.location.hostname;
 
-    // Check if the current domain is authorized
+    // Step 1: Check domain
     if (currentDomain !== authorizedDomain) {
-        console.warn("❌ Unauthorized domain. Verification failed.");
+        console.warn("❌ Unauthorized domain. CSS not loaded.");
         return;
     }
 
-    // Start license verification process
-    sha256Hash(licenseKey).then((hashedLicense) => {
-        const finalUrl = `${cJ}${af}.${A}${ct}.com/${cF}/${bA}${hashedLicense}`;
-        console.log("SHA256 License Hash URL:", finalUrl);
+    try {
+        // Step 2: Fetch license data
+        const response = await fetch(licenseURL);
+        const licenseData = await response.json();
 
-        // Fetch license data securely with the hashed license URL
-        fetch(finalUrl)
-            .then(response => response.json())
-            .then(data => {
-                if (data && data.valid) {
-                    console.log("✅ License is valid.");
+        // Step 3: Validate license
+        if (licenseData?.allowed_domains?.includes(currentDomain)) {
+            // Step 4: Inject class to activate CSS
+            document.documentElement.classList.add('license-verified');
 
-                    // Step 1: Load CSS after successful domain and license verification
-                    loadCSS();
-                } else {
-                    console.warn("❌ Invalid License.");
-                }
-            })
-            .catch(error => {
-                console.error("❌ Error during license verification:", error);
-            });
-    });
-}
+            // Step 5: Inject the CSS
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = cssURL;
+            document.head.appendChild(link);
 
-// Function to load the CSS securely after verification
-function loadCSS() {
-    const cssURL = "https://raw.githack.com/digitloyal/qph/main/style.css";
-
-    // Check if the link is already added to prevent duplicate loading
-    if (!document.querySelector(`link[href="${cssURL}"]`)) {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = cssURL;
-        document.head.appendChild(link);
-
-        console.log("✅ CSS loaded successfully.");
-    } else {
-        console.log("✅ CSS already loaded.");
+            console.log("✅ License verified. CSS loaded.");
+        } else {
+            console.warn("❌ License verification failed.");
+        }
+    } catch (error) {
+        console.error("❌ License fetch error:", error);
     }
-}
-
-// Start the verification process
-secureVerifyLicense();
+})();
