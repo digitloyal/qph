@@ -21,11 +21,11 @@
 
 /* feature Menu*/
 .page .entry-content{padding:30px!important;display:block!important;max-width:-webkit-fill-available!important}
-.feature-menu{padding:5px;text-align:center;position:relative;background:rgb(0 10 100);margin:0 0 28px 0!important;border:1px solid #1a73e8;border-radius:16px 16px 4px 4px}
-.feature-menu p{color:#fff;background:#08f;padding:4px;width:-webkit-fill-available;border:2px solid #E7E5FD;border-radius:10px;display:flex;justify-content:center;align-items:center}
+.feature-menu{padding:5px;text-align:center;position:relative;background:rgb(0 10 100);margin:0 0 28px 0!important;border:1px solid #1a73e8;border-radius:16px 16px 10px 10px}
+.feature-menu p{color:#fff;background:#08f;padding:4px;width:-webkit-fill-available;border:2px solid #E7E5FD;border-radius:10px;display:flex;justify-content:center;align-items:center;margin-bottom:10px!important}
 .feature-menu h2{font-size:1.6em;line-height:1.6em;margin-bottom:0;padding-bottom:0}
-.feature-menu ul{overflow:auto;clear:both;width:100%;display:flex;flex-wrap:nowrap;padding:0;justify-content:space-between;margin:16px 0;margin-bottom:0}
-.feature-menu li{position:relative;width:fit-content;list-style:none;line-height:1.3em;text-align:center;border-radius:10px;margin:0 10px;margin-bottom:16px;background:#f1f1f1;box-sizing:border-box;display:flex;align-items:center;justify-content:center;/* box-shadow:0 4px 10px -4px #7e7e7e */}
+.feature-menu ul{overflow:auto;clear:both;width:100%;display:flex;flex-wrap:nowrap;padding:0;justify-content:space-between;margin:10px 0;margin-bottom:0}
+.feature-menu li{position:relative;width:fit-content;list-style:none;line-height:1.3em;text-align:center;border-radius:10px;margin:0 10px;margin-bottom:10px;background:#f1f1f1;box-sizing:border-box;display:flex;align-items:center;justify-content:center;/* box-shadow:0 4px 10px -4px #7e7e7e */}
 .feature-menu li a{display:flex;flex-direction:column;align-items:center;width:132px;height:-webkit-fill-available;border:1px solid #1a73e8;border-radius:10px;padding:6px 0;text-decoration:none;color:#333}
 .feature-menu li svg{margin:3px 0;width:54px;height:54px;display:inline-block;color:#1f2024}
 .feature-menu li span{display:block;padding:0 3px;color:#1f2024}
