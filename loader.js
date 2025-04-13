@@ -2,8 +2,8 @@
   const licenseKey = "iJZc8v7CUUtkpLg0piEun46cSC3Es2U2cH7T24PTZtqijFgYAA";
   const domain = window.location.hostname.replace("www.", "");
 
-  const licenseFileURL = "https://cdn.jsdelivr.net/gh/digitloyal/qph@main/licenses.json";
-  const cssURL = "https://cdn.jsdelivr.net/gh/digitloyal/qph@main/style.css";
+  const licenseFileURL = "https://github.com/digitloyal/qph/blob/main/licenses.json";
+  const cssURL = "https://github.com/digitloyal/qph/blob/main/style.css";
 
   fetch(licenseFileURL)
     .then(res => res.json())
