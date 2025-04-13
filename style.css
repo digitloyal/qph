@@ -1,332 +1,134 @@
-/* Add this at the top of your CSS */
-body {
-    display: none;
+/* Sticky Ads */
+.sticky-ads{position:fixed;bottom:0;left:0;width:100%;min-height:70px;max-height:200px;padding:5px 0;box-shadow:0 -6px 18px 0 rgb(9 32 76 / 10%);-webkit-transition:all .1s ease-in;transition:all .1s ease-in;display:flex;align-items:center;justify-content:center;background-color:#fefefe;z-index:9999}
+.dark-skin .sticky-ads{background-color:#1f2024}
+.sticky-ads-close{width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:22px 22px 0 0;position:absolute;left:0;top:-28px;background-color:#fafafa;box-shadow:0 -6px 18px 0 #09204c14}
+.dark-skin .sticky-ads-close{background-color:#1f2024}
+.sticky-ads .sticky-ads-close svg{width:22px;height:22px;fill:#000}
+.dark-skin .sticky-ads-close svg{fill:#ccc}
+.sticky-ads .sticky-ads-content{overflow:hidden;display:flex;justify-content:center;position:relative;height:90px;width:100%;margin-right:10px;margin-left:10px;align-items:center}
+/* Right Side Buttons */
+.sticky-right-container{padding:0;margin:0;position:fixed;right:-130px;top:33.333%;width:200px;z-index:99999}
+.sticky-right-container ul{padding:0!important}
+.sticky-right li{list-style-type:none!important;background-color:none!important;color:#efefef;height:43px;padding:0;margin:0 0 1px 0;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out;cursor:pointer}
+.sticky-right li:hover{margin-left:-150px;background:#333;border-radius:25px 0 0 25px}
+.sticky-right li img{float:left;border-radius:0;margin:5px 5px;margin-left:10px;transition:all .3s ease;-webkit-animation:digitloyalRing 5s 0s ease-in-out infinite;-webkit-transform-origin:50% 4px;-moz-animation:digitloyalRing 5s 0s ease-in-out infinite;-moz-transform-origin:50% 4px;animation:digitloyalRing 5s 0s ease-in-out infinite;transform-origin:50% 4px}
+.sticky-right li p{padding:0;float:left;margin:0;text-transform:uppercase;line-height:43px}
+.sticky-right li a{color:#fff}
+/* @media only screen and (max-width:768px){
+.sticky-right-container{top:30%}
 }
-
-/* Only show content if license verified */
-.license-verified body {
-    display: block;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    color: #333;
-    /* etc... */
-}
-
-/* And wrap the rest of your rules like this: */
-.license-verified header { ... }
-.license-verified .feature-menu { ... }
-.license-verified nav a:hover { ... }
-/* etc... */
-
-    /* feature Menu*/
-
-    .feature-menu {
-        padding: 5px;
-        text-align: center;
-        position: relative;
-        background: rgb(0 10 100);
-        margin: 0 0 28px 0 !important;
-        border: 1px solid #1a73e8;
-        border-radius: 16px 16px 4px 4px
-    }
-
-    .feature-menu p {
-        color: #fff;
-        background: #08f;
-        padding: 4px;
-        width: -webkit-fill-available;
-        border: 2px solid #E7E5FD;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center
-    }
-
-    .feature-menu h2 {
-        font-size: 1.6em;
-        line-height: 1.6em;
-        margin-bottom: 0;
-        padding-bottom: 0
-    }
-
-    .feature-menu ul {
-        overflow: auto;
-        clear: both;
-        width: 100%;
-        display: flex;
-        flex-wrap: nowrap;
-        padding: 0;
-        justify-content: space-between;
-        margin: 16px 0;
-        margin-bottom: 0
-    }
-
-    .feature-menu li {
-        position: relative;
-        width: fit-content;
-        list-style: none;
-        line-height: 1.3em;
-        text-align: center;
-        border-radius: 10px;
-        margin: 0 10px;
-        margin-bottom: 16px;
-        background: #f1f1f1;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* box-shadow:0 4px 10px -4px #7e7e7e */
-    }
-
-    .feature-menu li a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 132px;
-        height: -webkit-fill-available;
-        border: 1px solid #1a73e8;
-        border-radius: 10px;
-        padding: 6px 0;
-        text-decoration: none;
-        color: #333
-    }
-
-    .feature-menu li svg {
-        margin: 3px 0;
-        width: 54px;
-        height: 54px;
-        display: inline-block;
-        color: #1f2024
-    }
-
-    .feature-menu li span {
-        display: block;
-        padding: 0 3px;
-        color: #1f2024
-    }
-
-    .feature-menu li a:hover {
-        background-color: #1a73e8;
-        color: rgb(255 255 255);
-        box-shadow: 0 7px 7px 0 rgb(0 0 0 / 6%);
-        border: 1px solid #111;
-        border-radius: 10px
-    }
-
-    .feature-menu li a:after {
-        background: none repeat scroll 0 0 transparent;
-        bottom: 6px;
-        content: "";
-        display: block;
-        height: 2px;
-        left: 50%;
-        position: absolute;
-        background: #fff;
-        transition: width .3s ease 0s, left .3s ease 0s;
-        width: 0;
-        border-radius: 10px
-    }
-
-    .feature-menu li a:hover:after {
-        width: 100%;
-        left: 0;
-        border-radius: 10px
-    }
-
-    /* Dark */
-
-    .dark-skin .feature-menu li {
-        background: #27292d;
-        box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 6px 2px
-    }
-
-    .dark-skin .feature-menu li a:hover {
-        background-color: rgb(18 37 89);
-        color: #fff;
-        border: 1px solid #fff;
-        box-shadow: 0 7px 7px 0 rgba(0, 0, 0, .06)
-    }
-
-    .dark-skin .feature-menu li a:after {
-        background: none repeat scroll 0 0 transparent;
-        bottom: 6px;
-        content: "";
-        display: block;
-        height: 2px;
-        left: 50%;
-        position: absolute;
-        background: #fff;
-        transition: width .3s ease 0s, left .3s ease 0s;
-        width: 0;
-        border-radius: 10px
-    }
-
-    .dark-skin .feature-menu li a:hover:after {
-        width: 100%;
-        left: 0;
-        border-radius: 10px
-    }
-
-    .dark-skin .feature-menu li a {
-        border: 1px solid #1a73e8
-    }
-
-    .dark-skin .feature-menu li svg {
-        color: #fff !important
-    }
-
-    .dark-skin .feature-menu li span {
-        color: #fff !important
-    }
-
-    /* Responsive */
-
-    @media screen and (max-width:1024px) {
-        .feature-menu {
-            margin: 0
-        }
-    }
-
-    /* .feature-menu li:last-child{display:none}
 */
 
-    /* Join Links Section */
-
-    .join-links {
-        text-align: center;
-        margin: 2rem 0;
-    }
-
-    .btn {
-        display: inline-block;
-        margin: 0.5rem;
-        padding: 0.75rem 1.5rem;
-        color: white;
-        border-radius: 5px;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .telegram {
-        background: #229ED9;
-    }
-
-    .whatsapp {
-        background: #25D366;
-    }
-
-    .btn:hover {
-        transform: scale(1.05);
-    }
-
-    .telegram:hover {
-        background: #1d8bb0;
-    }
-
-    .whatsapp:hover {
-        background: #1aad50;
-    }
-
-/* Quiz Categories */
-.quiz-categories {
-    justify-content: center;
-    padding: 2rem;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 15px;
-    color: #444;
-    margin-bottom: 20px;
+/* feature Menu*/
+.feature-menu{padding:5px;text-align:center;position:relative;background:rgb(0 10 100);margin:0 0 28px 0!important;border:1px solid #1a73e8;border-radius:16px 16px 4px 4px}
+.feature-menu p{color:#fff;background:#08f;padding:4px;width:-webkit-fill-available;border:2px solid #E7E5FD;border-radius:10px;display:flex;justify-content:center;align-items:center}
+.feature-menu h2{font-size:1.6em;line-height:1.6em;margin-bottom:0;padding-bottom:0}
+.feature-menu ul{overflow:auto;clear:both;width:100%;display:flex;flex-wrap:nowrap;padding:0;justify-content:space-between;margin:16px 0;margin-bottom:0}
+.feature-menu li{position:relative;width:fit-content;list-style:none;line-height:1.3em;text-align:center;border-radius:10px;margin:0 10px;margin-bottom:16px;background:#f1f1f1;box-sizing:border-box;display:flex;align-items:center;justify-content:center;/* box-shadow:0 4px 10px -4px #7e7e7e */}
+.feature-menu li a{display:flex;flex-direction:column;align-items:center;width:132px;height:-webkit-fill-available;border:1px solid #1a73e8;border-radius:10px;padding:6px 0;text-decoration:none;color:#333}
+.feature-menu li svg{margin:3px 0;width:54px;height:54px;display:inline-block;color:#1f2024}
+.feature-menu li span{display:block;padding:0 3px;color:#1f2024}
+.feature-menu li a:hover{background-color:#1a73e8;color:rgb(255 255 255);box-shadow:0 7px 7px 0 rgb(0 0 0 / 6%);border:1px solid #111;border-radius:10px}
+.feature-menu li a:after{background:none repeat scroll 0 0 transparent;bottom:6px;content:"";display:block;height:2px;left:50%;position:absolute;background:#fff;transition:width .3s ease 0s,left .3s ease 0s;width:0;border-radius:10px}
+.feature-menu li a:hover:after{width:100%;left:0;border-radius:10px}
+/* Dark */
+.dark-skin .feature-menu li{background:#27292d;box-shadow:rgba(60,64,67,0.3) 0 1px 2px 0,rgba(60,64,67,0.15) 0 2px 6px 2px}
+.dark-skin .feature-menu li a:hover{background-color:rgb(18 37 89);color:#fff;border:1px solid #fff;box-shadow:0 7px 7px 0 rgba(0,0,0,.06)}
+.dark-skin .feature-menu li a:after{background:none repeat scroll 0 0 transparent;bottom:6px;content:"";display:block;height:2px;left:50%;position:absolute;background:#fff;transition:width .3s ease 0s,left .3s ease 0s;width:0;border-radius:10px}
+.dark-skin .feature-menu li a:hover:after{width:100%;left:0;border-radius:10px}
+.dark-skin .feature-menu li a{border:1px solid #1a73e8}
+.dark-skin .feature-menu li svg{color:#fff!important}
+.dark-skin .feature-menu li span{color:#fff!important}
+/* Responsive */
+@media screen and (max-width:1024px){
+  .feature-menu{margin:0}
 }
-
-.card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: -webkit-fill-available;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* .feature-menu li:last-child{display:none}
+*/
+<!--
+<style>
+#grid{display:grid;grid-template-rows:1fr 1fr 1fr;grid-template-columns:1fr 1fr 1fr;grid-gap:2vw}
+#grid > div{font-size:5vw;padding:.5em;background:gold;text-align:center}
+</style>
+<style>
+.join-whatsapp h3,.join-telegram h3{border-radius:10px;padding-left:0!important}
+.join-whatsapp a,.join-telegram a{border-radius:10px}
+@media (max-width:768px){
+  .join-whatsapp h3,.join-telegram h3{border-radius:10px;padding-left:0!important}
+  .join-whatsapp a,.join-telegram a{border-radius:10px}
+  .join-whatsapp span,.join-telegram span{font-size:16px!important}
 }
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+</style>
+<style>
+@media (max-width:768px){
+  .magazine1:not(.has-builder):not(.error404) .main-content,.magazine1:not(.has-builder):not(.error404) .related-posts-full-width .tie-col-md-12,.magazine1:not(.has-builder):not(.error404) .sidebar{padding-left:5px;padding-right:5px}
 }
-
-.card h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #0077cc;
+#logo{margin-top:20px!important;margin-bottom:20px!important}
+nav.main-nav .menu>li.tie-current-menu>a,nav.main-nav .menu>li:hover>a{border-radius:8px!important}
+.main-menu-wrapper{border-radius:8px!important}
+.main-menu .menu>li>a{font-size:16px}
+.components{padding-right:6px}
+.block-head-4 .has-block-head-4:before,.block-head-4 .mag-box-title h3:before,.block-head-4 .comment-reply-title:before,.block-head-4 .related.products>h2:before,.block-head-4 .up-sells>h2:before,.block-head-4 .cross-sells>h2:before,.block-head-4 .cart_totals>h2:before,.block-head-4 .bbp-form legend:before{border-radius:10px 0 0 10px}
+.wp-block-image img{border-radius:10px!important}
+.wp-block-image{margin:1em 0!important}
+.scrolling-box .mag-box-container{min-height:fit-content!important}
+/*.container-wrapper{padding:20px!important}
+*/
+br{display:none}
+/* .entry p{display:none}
+*/
+@media (min-width:768px){
+  .col-sm-4{display:none!important}
+  .col-sm-8{width:100%!important}
+  body{margin:0!important}
+  .page .entry-header{display:none!important}
+  .container{width:96%!important}
 }
-
-.card img.icon {
-    width: 50px;
-    height: 50px;
-    margin: 0.5rem 0;
+@media (max-width:768px){
+  .container-wrapper,.entry-content{padding:10px!important}
+  .box{padding:2px!important}
+  .wrapper{max-width:100%!important;grid-template-columns:32.33% 32.33% 32.33%!important}
+  .box_category_16{display:none!important}
+  .entry p:last-child{display:none}
 }
-
-.card h4 {
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    color: #555;
+body{margin:0!important}
+.block{width:100%!important;margin-right:0!important}
+.wrapper{max-width:97.5%!important;display:grid;grid-template-columns:25% 25% 25% 25%;grid-gap:10px;/*ackground-color:#fff;*/
+	color:#444;margin-bottom:20px}
+.topic{max-width:100%;display:grid;grid-template-columns:16.333% 16.333% 16.333% 16.333% 16.333% 16.333%;grid-gap:10px;/*background-color:#fff;*/
+	color:#444}
+.box{padding:10px;margin:0!important;border:solid 2px #fff;border-radius:12px;box-shadow:rgb(60 64 67 / 30%) 0 1px 2px 0,rgb(60 64 67 / 15%) 0 2px 6px 2px}
+.box img{transition:1s;vertical-align:middle;background:#fff!important;width:100%;box-sizing:border-box;border-radius:10px;border:solid 1px #ff0000}
+h1{position:relative;padding:0;margin:0;font-size:18px;color:#080808;-webkit-transition:all 0.4s ease 0s;-o-transition:all 0.4s ease 0s;transition:all 0.4s ease 0s}
+.box img:hover{border:solid 1.5px #03a9f4}
+.one{margin-bottom:20px;border:1px!important}
+.one h1{text-align:center;text-transform:uppercase;padding:10px;background-color:transparent;background-image:linear-gradient(120deg,#6F42EC 0%,#0FC7ED 100%);border:2px solid #E7E5FD;box-shadow:0 0 10px 0 rgb(0 0 0 / 50%);transition:background 0.3s,border 0.3s,border-radius 0.3s,box-shadow 0.3s;border-radius:10px;color:#fff;font-size:18px!important}
+.category{transition:1s;font-weight:600;text-align:center;text-transform:uppercase;padding:10px;background-color:transparent;border-style:solid;border-color:#ff0000;transition:background 0.3s,border 0.3s,border-radius 0.3s,box-shadow 0.3s;border-radius:10px}
+.category:hover{transition:1s;border-style:solid;border-color:#000;color:#000}
+.category a{transition:1s;color:#fff}
+@media (max-width:768px){
+  .wrapper .category a:last-child{display:none}
 }
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #ddd;
-    margin-top: 3rem;
+/* Join Me */
+.join-block{margin:8px auto;margin-bottom:20px;text-align:center;display:block;clear:both;width:-webkit-fill-available}
+.join-whatsapp h3,.join-telegram h3{border-radius:10px}
+.join-whatsapp h3{border:2px solid #29a71a;border-radius:2px;background:#f0f8ff;color:#29a71a;display:flex;align-items:center;padding:7px;justify-content:space-between}
+.join-whatsapp span{display:flex;align-items:center;font-weight:bold;margin-left:10px;font-size:1.5rem!important;color:#29a71a}
+.join-whatsapp img{width:32;height:32}
+.join-whatsapp a{text-decoration:none;background:#25d366;color:white;padding:5px 10px;border-radius:2px;flex-shrink:0}
+.join-telegram h3{border:2px solid #039be5;border-radius:2px;background:#f0f8ff;color:#039be5;display:flex;align-items:center;padding:7px;justify-content:space-between}
+.join-telegram span{display:flex;align-items:center;font-weight:bold;margin-left:10px;font-size:1.5rem!important;color:#039be5}
+.join-telegram img{width:32;height:32}
+.join-telegram a{text-decoration:none;background:#0088CC;color:white;padding:5px 10px;border-radius:2px;flex-shrink:0}
+@-webkit-keyframes blinker{
+  from{opacity:1.0}
+  to{opacity:0.0}
 }
-
-/* Typography Scaling */
-h1 {
-    font-size: 2.2rem;
-}
-
-nav a {
-    font-size: 1rem;
-}
-
-.btn {
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
-}
-
-/* Responsive Header Padding */
-header {
-    padding: 1rem;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-    nav a {
-        display: inline-block;
-        margin: 0.5rem 8px;
-    }
-    .join-links {
-        margin: 1.5rem 0;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.7rem;
-    }
-    .btn {
-        display: block;
-        margin: 0.5rem auto;
-        width: 80%;
-        font-size: 1rem;
-    }
-    nav a {
-        display: block;
-        margin: 0.5rem auto;
-    }
+.join-whatsapp a,.join-telegram a,.digitloyal-yt-btn{text-decoration:blink;-webkit-animation-name:blinker;-webkit-animation-duration:0.6s;-webkit-animation-iteration-count:infinite;-webkit-animation-timing-function:ease-in-out;-webkit-animation-direction:alternate}
+.join-whatsapp h3,.join-telegram h3{border-radius:10px;padding-left:0!important}
+.join-whatsapp a,.join-telegram a{border-radius:10px}
+@media (max-width:768px){
+  .join-whatsapp h3,.join-telegram h3{border-radius:10px;padding-left:0!important}
+  .join-whatsapp a,.join-telegram a{border-radius:10px}
+  .join-whatsapp span,.join-telegram span{font-size:16px!important}
 }
