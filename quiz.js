@@ -10,7 +10,7 @@ function secureVerifyLicense() {
     const bp = "trim";                  // Operation to trim the license key
 
     // License Key - Obfuscated with a SHA256 hash for security
-    const licenseKey = "7c8caf28-e07e-407c-9eba-63ccff9f0e40";
+    const licenseKey = "ac77e4f9-305a-4ab9-92a3-6f523901b165";
     
     // Generate a SHA256 hash of the license key (for additional security)
     const sha256Hash = (str) => {
