@@ -53,7 +53,7 @@
 .block-header{font-size:1.8rem;font-weight:700;text-align:center;margin-bottom:15px;transition:color 0.3s ease}
 .block-header:hover{color:#555}
 /* Join Card */
-    .join-card{display:flex;justify-content:space-between;align-items:center;border-radius:12px;background:#f0f8ff;padding:12px 16px;margin-bottom:15px;flex-wrap:wrap;transition:transform 0.3s ease,box-shadow 0.3s ease}
+    .join-card{display:flex;justify-content:space-between;align-items:center;border-radius:12px;background:#f0f8ff;padding:12px 16px;margin-bottom:15px;flex-wrap:wrap;transition:transform 0.3s ease,box-shadow 0.3s ease;border:2px solid #dddfff}
 .join-card:hover{transform:translateY(-3px);box-shadow:0 4px 8px rgba(0,0,0,0.15)}
 /* Left part containing icon and text */
     .left-part{display:flex;align-items:center;font-size:1.2rem;font-weight:600;margin-bottom:10px}
@@ -77,7 +77,7 @@
 }
 /* Responsive styles */
     @media (max-width:768px){
-  .join-card{flex-direction:column;align-items:flex-start}
+  .join-card{flex-direction:column;align-items:center;}
   .action-btn{width:100%;text-align:center;margin-top:10px}
 }
 
@@ -93,7 +93,7 @@
 @media (min-width:1024px){
 .quiz-categories{grid-template-columns:repeat(4,1fr)}
 }
-.card{background:white;padding:1.5rem;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);text-align:center;cursor:pointer;transition:transform 0.3s ease,box-shadow 0.3s ease}
+.card{background:white;padding:1.5rem;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);text-align:center;cursor:pointer;transition:transform 0.3s ease,box-shadow 0.3s ease;border:2px solid #dddfff80}
 .card:hover{transform:translateY(-5px);box-shadow:0 4px 15px rgba(0,0,0,0.2)}
 .card h3{margin:0;font-size:1.2rem;font-weight:bold;color:#0077cc}
 .card svg{width:92px;height:92px;margin:0.5rem 0;stroke:#333}
@@ -109,17 +109,17 @@ grid-gap:15px;max-width:1200px;margin:0 auto 2rem auto;justify-content:center}
 @media (min-width:1024px){
 .card-categories{grid-template-columns:repeat(4,1fr)}
 }
-.card-big{background:white;padding:1.5rem;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);text-align:center;cursor:pointer;transition:transform 0.3s ease,box-shadow 0.3s ease}
+.card-big{background:white;padding:1.5rem;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);text-align:center;cursor:pointer;transition:transform 0.3s ease,box-shadow 0.3s ease;border:2px solid #dddfff80}
 .card-big:hover{transform:translateY(-5px);box-shadow:0 4px 15px rgba(0,0,0,0.2)}
 .card-big h3{margin:0;font-size:1.2rem;font-weight:bold;color:#0077cc}
 .card-big svg{width:92px;height:140px;margin:0.5rem 0;stroke:#333}
 .card-big h4{margin-top:0.5rem;margin-bottom:0;font-size:1rem;font-weight:bold;color:#555}
 
 /* Category Wrapper */
-.block-header{background:linear-gradient(to right,#7b2ff7,#00c6ff);color:#fff;font-size:18px;font-weight:700;text-align:center;padding:12px 0;margin-bottom:20px;border-radius:12px;text-transform:uppercase;letter-spacing:1px;border:2px solid #e7e5fd;box-shadow:0 0 10px 0 rgb(0 0 0 / 50%)}
+.block-header{background:linear-gradient(to right,#7b2ff7,#00c6ff);color:#fff;font-size:18px;font-weight:700;text-align:center;padding:2px 0;margin-bottom:16px;border-radius:12px;text-transform:uppercase;letter-spacing:1px;border:2px solid #e7e5fd;box-shadow:0 0 10px 0 rgb(0 0 0 / 50%)}
 .category-wrapper{display:grid;grid-template-columns:repeat(2,1fr);/* Mobile default */
 gap:16px;padding:0}
-.category-box{background-color:#ffffff;color:#333333;padding:14px 20px;border-radius:12px;text-align:center;font-size:17px;font-weight:600;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,0.06);border:2px solid transparent;transition:all 0.3s ease-in-out;cursor:pointer}
+.category-box{background-color:#ffffff;color:#333333;padding:14px 20px;border-radius:12px;text-align:center;font-size:17px;font-weight:600;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,0.06);border:2px solid transparent;transition:all 0.3s ease-in-out;cursor:pointer;border:2px solid #dddfff80}
 /* Hover effect */
 .category-box:hover{border-color:#007bff;background-color:#f0f8ff;color:#007bff;box-shadow:0 4px 12px rgba(0,123,255,0.2);transform:translateY(-2px)}
 /* Tablet */
