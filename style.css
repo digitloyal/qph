@@ -56,7 +56,7 @@
     .join-card{display:flex;justify-content:space-between;align-items:center;border-radius:12px;background:#f0f8ff;padding:12px 16px;margin-bottom:15px;flex-wrap:wrap;transition:transform 0.3s ease,box-shadow 0.3s ease;border:2px solid #dddfff}
 .join-card:hover{transform:translateY(-3px);box-shadow:0 4px 8px rgba(0,0,0,0.15)}
 /* Left part containing icon and text */
-    .left-part{display:flex;align-items:center;font-size:1.2rem;font-weight:600;margin-bottom:10px}
+    .left-part{display:flex;align-items:center;font-size:1.2rem;font-weight:600;margin-bottom:0}
 .left-part span{margin-left:10px}
 /* SVG Icon styling */
     .icon{width:32px;height:32px;flex-shrink:0;transition:transform 0.3s ease}
@@ -116,7 +116,7 @@ grid-gap:15px;max-width:1200px;margin:0 auto 2rem auto;justify-content:center}
 .card-big h4{margin-top:0.5rem;margin-bottom:0;font-size:1rem;font-weight:bold;color:#555}
 
 /* Category Wrapper */
-.block-header{background:linear-gradient(to right,#7b2ff7,#00c6ff);color:#fff;font-size:18px;font-weight:700;text-align:center;padding:2px 0;margin-bottom:16px;border-radius:12px;text-transform:uppercase;letter-spacing:1px;border:2px solid #e7e5fd;box-shadow:0 0 10px 0 rgb(0 0 0 / 50%)}
+.block-header{background:linear-gradient(to right,#7b2ff7,#00c6ff);color:#fff;font-size:18px;font-weight:700;text-align:center;padding:8px 0;margin-bottom:16px;border-radius:12px;text-transform:uppercase;letter-spacing:1px;border:2px solid #e7e5fd;box-shadow:0 0 10px 0 rgb(0 0 0 / 50%)}
 .category-wrapper{display:grid;grid-template-columns:repeat(2,1fr);/* Mobile default */
 gap:16px;padding:0}
 .category-box{background-color:#ffffff;color:#333333;padding:14px 20px;border-radius:12px;text-align:center;font-size:17px;font-weight:600;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,0.06);border:2px solid transparent;transition:all 0.3s ease-in-out;cursor:pointer;border:2px solid #dddfff80}
