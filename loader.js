@@ -1,6 +1,6 @@
 (function () {
   const LICENSE_URL = "https://raw.githack.com/digitloyal/qph/main/licenses.json";
-  const CSS_URL = "https://raw.githack.com/digitloyal/qph/main/google";
+  const CSS_URL = "https://raw.githack.com/digitloyal/qph/main/style.css";
   const CURRENT_DOMAIN = window.location.hostname;
 
   fetch(LICENSE_URL)
