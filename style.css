@@ -231,51 +231,38 @@ gap:16px;padding:0}
   .simple-quiz-card{padding:1rem!important}
   .simple-quiz-title{font-size:1.2rem!important}
 }
-/* Wrapper for the entire quote slider */
-.custom-slider-wrapper{position:relative;max-width:100%;border-radius:10px;/* Smooth corners */
-  overflow:hidden;/* Hide overflow from sliding content */
-  font-family:'Segoe UI',Roboto,sans-serif;/* Clean and readable fonts */}
-/* Container that holds all slides */
+/* Wrapper for the entire slider */
+.custom-slider-wrapper{position:relative;max-width:100%;border-radius:10px;overflow:hidden;font-family:'Segoe UI',Roboto,sans-serif}
+/* Slider container */
 .custom-slider{height:250px;position:relative}
-/* Individual slide setup */
-.custom-slide{position:absolute;inset:0;/* Top,right,bottom,left = 0 */
-  background-size:cover;/* Cover the entire area */
-  background-position:center;opacity:0;/* Hidden by default */
-  transition:opacity 1s ease;/* Smooth fade transition */
-  display:flex;justify-content:center;align-items:center}
-/* Active slide - becomes visible */
-.custom-slide.active{opacity:1;z-index:10;/* Ensure it's above other elements */}
-/* Overlay pattern to add texture to low-res backgrounds */
-.custom-overlay{position:absolute;inset:0;background:url("data:image/svg+xml;utf8,<svg ... >") repeat;/* SVG dot pattern */
-  backdrop-filter:brightness(0.9);/* Slight darkening */
-  z-index:1}
-/* Glass-like effect box over quote */
-.custom-glass{position:relative;z-index:2;background:rgba(0,0,0,0.45);/* Semi-transparent black */
-  backdrop-filter:blur(8px);/* Glass blur effect */
-  padding:25px 35px;border-radius:20px;color:#fff;text-align:center;max-width:90%;animation:fadeIn 1s ease forwards;box-shadow:0 8px 24px rgba(0,0,0,0.3);/* Soft shadow */
-  top:-20px;/* Slight upward adjustment */}
-/* Main quote text */
-.custom-text{font-size:1.4rem;font-weight:500;line-height:1.5;text-shadow:1px 1px 4px rgba(0,0,0,0.5);/* Makes white text readable on backgrounds */
-  opacity:0;animation:fadeInText 1.2s ease 0.3s forwards}
-/* Author name styling */
-.custom-text span{display:block;margin-top:10px;font-size:1rem;font-style:italic;color:#ffd86d;/* Golden yellow for author */}
+/* Each individual slide */
+.custom-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease;display:flex;justify-content:center;align-items:center}
+/* Active slide is visible and on top */
+.custom-slide.active{opacity:1;z-index:10}
+/* Overlay pattern with brightness adjustment */
+.custom-overlay{position:absolute;inset:0;background:url("data:image/svg+xml;utf8,<svg ... >") repeat;backdrop-filter:brightness(0.9);z-index:1}
+/* Glassmorphism box containing quote and copy button */
+.custom-glass{position:relative;z-index:2;background:rgba(0,0,0,0.45);backdrop-filter:blur(8px);padding:25px 35px;border-radius:20px;color:#fff;border:2px solid rgb(1 1 1 / 10%);text-align:center;max-width:90%;animation:fadeIn 1s ease forwards;box-shadow:0 8px 24px rgba(0,0,0,0.3);top:-20px;min-width:94%;min-height:60%}
+/* Quote text styling */
+.custom-text{font-size:1.4rem;font-weight:500;line-height:1.5;text-shadow:1px 1px 4px rgba(0,0,0,0.5);opacity:0;animation:fadeInText 1.2s ease 0.3s forwards}
+/* Author line */
+.custom-text span{display:block;margin-top:10px;font-size:1rem;font-style:italic;color:#ffd86d}
 /* Copy to clipboard button */
-.custom-copy-btn{margin-top:12px;background:rgba(255,255,255,0.15);/* Transparent white */
-  color:#fff;border:none;padding:6px 16px;border-radius:8px;cursor:pointer;font-size:0.9rem;transition:background 0.3s ease}
-/* Copy button hover effect */
+.custom-copy-btn{margin-top:12px;background:rgba(255,255,255,0.15);color:#fff;border:none;padding:6px 16px;border-radius:8px;cursor:pointer;font-size:0.9rem;transition:background 0.3s ease}
+/* Hover effect on copy button */
 .custom-copy-btn:hover{background:rgba(255,255,255,0.3)}
-/* Navigation controls wrapper */
+/* Navigation buttons container */
 .custom-controls{position:absolute;bottom:12px;left:10px;z-index:20;display:flex;gap:10px}
-/* Navigation buttons styling */
+/* Prev/Next/Random buttons */
 .custom-controls button{padding:8px 14px;font-size:1.2rem;background:rgba(0,0,0,0.5);border:none;color:#fff;border-radius:8px;cursor:pointer;transition:background 0.3s}
-/* Hover effect for navigation buttons */
+/* Hover effect on nav buttons */
 .custom-controls button:hover{background:rgba(255,255,255,0.2)}
-/* Fade-in animation for glass container */
+/* Fade-in animation for the glass box */
 @keyframes fadeIn{
   from{opacity:0;transform:translateY(10px)}
   to{opacity:1;transform:translateY(0)}
 }
-/* Fade-in animation for text */
+/* Fade-in animation for quote text */
 @keyframes fadeInText{
   to{opacity:1}
 }
