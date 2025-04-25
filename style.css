@@ -145,7 +145,7 @@ gap:16px;padding:0}
 /* ===== Quiz Card Container ===== */
 .quiz-container{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))!important;gap:1.5rem!important;width:100%!important;max-width:1100px!important;font-family:'Segoe UI',sans-serif!important}
 /* ===== Individual Quiz Card ===== */
-.quiz-card{background-color:#ffffff!important;border-radius:16px!important;box-shadow:0 6px 18px rgba(0,0,0,0.1)!important;padding:1.5rem!important;transition:transform 0.3s ease,box-shadow 0.3s ease!important;display:flex!important;flex-direction:column!important;gap:0.8rem!important}
+.quiz-card{background-color:#ffffff!important;border-radius:16px!important;box-shadow:0 6px 18px rgba(0,0,0,0.1)!important;padding:1.5rem!important;transition:transform 0.3s ease,box-shadow 0.3s ease!important;display:flex!important;flex-direction:column!important;gap:0.8rem!important;justify-content:space-between!important}
 .quiz-card:hover{transform:translateY(-5px)!important;box-shadow:0 10px 20px rgba(0,119,255,0.2)!important;background-color:#f5faff!important}
 /* ===== Quiz Title Inside Card ===== */
 .quiz-title{font-size:1.2rem!important;font-weight:bold!important;color:#333!important}
@@ -154,7 +154,7 @@ gap:16px;padding:0}
 .tag{background-color:#eef6ff!important;color:#0077ff!important;padding:0.3rem 0.6rem!important;border-radius:8px!important;font-size:0.75rem!important;font-weight:bold!important}
 /* ===== Progress Bar ===== */
 .progress-bar{background-color:#e0e0e0!important;border-radius:10px!important;overflow:hidden!important;height:10px!important}
-.progress-fill{background-color:#0077ff!important;height:100%!important;width:0%!important;transition:width 0.4s ease-in-out!important}
+.progress-fill{background-color:#0077ff!important;height:100%!important;transition:width 0.4s ease-in-out!important}
 /* ===== Rating System ===== */
 .rating{font-size:1.2rem!important;color:gold!important;user-select:none!important}
 .star{cursor:pointer!important;transition:transform 0.2s!important}
