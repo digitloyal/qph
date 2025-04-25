@@ -133,10 +133,8 @@ gap:16px;padding:0}
 .category-box:active{transform:scale(0.97)}
 
 /* ===Quiz Listing CSS=== */
-
 /* ===== Block Styling ===== */
 .qna-block{font-family:'Segoe UI',sans-serif;background-color:#f4f4f4;color:var(--text-color);padding:2rem;display:flex;flex-direction:column;align-items:center}
-.custom-title{margin-bottom:1rem;font-size:2.5rem;font-weight:700;text-align:center;font-family:'Segoe UI',sans-serif;color:#333}
 /* ===== Filters Section ===== */
   .filters{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;justify-content:center;font-family:'Segoe UI',sans-serif}
 .filters input[type="text"],.filters select{padding:0.8rem 1rem;border:2px solid #ccc;border-radius:10px;font-size:1rem;font-family:'Segoe UI',sans-serif}
