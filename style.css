@@ -1,3 +1,7 @@
+/* Block Header */
+.block-header{background:linear-gradient(to right,#7b2ff7,#00c6ff);color:#fff;font-size:1.8rem;font-weight:700;text-align:center;padding:8px 0;margin-bottom:15px;border-radius:12px;text-transform:uppercase;letter-spacing:1px;border:2px solid #e7e5fd;box-shadow:0 0 10px 0 rgba(0,0,0,0.5);transition:all 0.4s ease;cursor:pointer}
+.block-header:hover{color:#fff;background:linear-gradient(to right,#00c6ff,#7b2ff7);transform:scale(1.05);box-shadow:0 0 15px 4px rgba(123,47,247,0.4)}
+
 /* Sticky Ads */
 .sticky-ads{position:fixed;bottom:0;left:0;width:100%;min-height:70px;max-height:200px;padding:5px 0;box-shadow:0 -6px 18px 0 rgb(9 32 76 / 10%);-webkit-transition:all .1s ease-in;transition:all .1s ease-in;display:flex;align-items:center;justify-content:center;background-color:#fefefe;z-index:9999}
 .dark-skin .sticky-ads{background-color:#1f2024}
@@ -49,9 +53,7 @@
 .btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,0.25)}
 
 /* Join me 2 */
-    .join-block{margin:0;padding:0;font-family:Arial,sans-serif}
-.block-header{font-size:1.8rem;font-weight:700;text-align:center;margin-bottom:15px;transition:color 0.3s ease}
-.block-header:hover{color:#555}
+ .join-block{margin:0;padding:0;font-family:Arial,sans-serif}
 /* Join Card */
     .join-card{display:flex;justify-content:space-between;align-items:center;border-radius:12px;background:#f0f8ff;padding:12px 16px;margin-bottom:15px;flex-wrap:wrap;transition:transform 0.3s ease,box-shadow 0.3s ease;border:2px solid #dddfff}
 .join-card:hover{transform:translateY(-3px);box-shadow:0 4px 8px rgba(0,0,0,0.15)}
@@ -116,7 +118,6 @@ grid-gap:15px;max-width:1200px;margin:0 auto 2rem auto;justify-content:center}
 .card-big h4{margin-top:0.5rem;margin-bottom:0;font-size:1rem;font-weight:bold;color:#555}
 
 /* Category Wrapper */
-.block-header{background:linear-gradient(to right,#7b2ff7,#00c6ff);color:#fff;font-size:18px;font-weight:700;text-align:center;padding:8px 0;margin-bottom:16px;border-radius:12px;text-transform:uppercase;letter-spacing:1px;border:2px solid #e7e5fd;box-shadow:0 0 10px 0 rgb(0 0 0 / 50%)}
 .category-wrapper{display:grid;grid-template-columns:repeat(2,1fr);/* Mobile default */
 gap:16px;padding:0}
 .category-box{background-color:#ffffff;color:#333333;padding:14px 20px;border-radius:12px;text-align:center;font-size:17px;font-weight:600;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,0.06);border:2px solid transparent;transition:all 0.3s ease-in-out;cursor:pointer;border:2px solid #dddfff80}
@@ -166,4 +167,3 @@ gap:16px;padding:0}
 @media (max-width:600px){
   .custom-title{font-size:2rem!important}
 }
-
