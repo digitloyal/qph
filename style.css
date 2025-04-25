@@ -240,7 +240,9 @@ gap:16px;padding:0}
 /* Active slide is visible and on top */
 .custom-slide.active{opacity:1;z-index:10}
 /* Overlay pattern with brightness adjustment */
-.custom-overlay{position:absolute;inset:0;background:url("data:image/svg+xml;utf8,<svg ... >") repeat;backdrop-filter:brightness(0.9);z-index:1}
+.custom-overlay{position:absolute;inset:0;background:url("https://quiz.taiyaarikaro.in/wp-content/uploads/maze-white.webp") repeat;backdrop-filter:brightness(2);z-index:1;background-repeat:repeat;background-size:auto}
+.custom-overlay::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.25);/* darken for contrast */
+  z-index:1;pointer-events:none}
 /* Glassmorphism box containing quote and copy button */
 .custom-glass{position:relative;z-index:2;background:rgba(0,0,0,0.45);backdrop-filter:blur(8px);padding:25px 35px;border-radius:20px;color:#fff;border:2px solid rgb(1 1 1 / 10%);text-align:center;max-width:90%;animation:fadeIn 1s ease forwards;box-shadow:0 8px 24px rgba(0,0,0,0.3);top:-20px;min-width:94%;min-height:60%}
 /* Quote text styling */
