@@ -231,3 +231,29 @@ gap:16px;padding:0}
   .simple-quiz-card{padding:1rem!important}
   .simple-quiz-title{font-size:1.2rem!important}
 }
+
+/* Slider container styling */
+.quote-slider{position:relative!important;width:90%!important;max-width:720px!important;height:480px!important;overflow:hidden!important;border-radius:20px!important;box-shadow:0 20px 50px rgba(0,0,0,0.4)!important}
+/* Each quote slide */
+.quote-slide{position:absolute!important;inset:0!important;background-size:cover!important;background-position:center!important;opacity:0!important;transform:scale(1.05)!important;transition:opacity 1s ease,transform 1s ease!important;display:flex!important;justify-content:center!important;align-items:center!important}
+/* Active quote slide visible with zoom effect */
+.quote-slide.active{opacity:1!important;transform:scale(1)!important;z-index:1!important}
+/* Glassmorphism box containing quote text */
+.quote-glass{background:rgba(255,255,255,0.1)!important;backdrop-filter:blur(10px)!important;-webkit-backdrop-filter:blur(10px)!important;padding:35px!important;border-radius:20px!important;max-width:85%!important;color:#fff!important;text-align:center!important;border:1px solid rgba(255,255,255,0.2)!important;box-shadow:0 8px 32px rgba(0,0,0,0.25)!important}
+/* Main quote text */
+.quote-text{font-size:1.5rem!important;font-weight:600!important;line-height:1.5!important}
+/* Quote author or secondary line */
+.quote-text span{display:block!important;margin-top:15px!important;font-size:1rem!important;font-style:italic!important;color:#ffd15c!important}
+/* Navigation arrow buttons */
+.nav{position:absolute!important;top:50%!important;transform:translateY(-50%)!important;font-size:2rem!important;color:#fff!important;background:rgba(0,0,0,0.4)!important;border:none!important;border-radius:50%!important;padding:10px 14px!important;cursor:pointer!important;z-index:2!important;transition:background 0.3s!important}
+/* On hover effect for navigation */
+.nav:hover{background:rgba(255,255,255,0.2)!important}
+/* Left navigation */
+.prev{left:15px!important}
+/* Right navigation */
+.next{right:15px!important}
+/* Responsive adjustments */
+@media (max-width:600px){
+  .quote-text{font-size:1.1rem!important}
+  .quote-glass{padding:20px!important}
+}
