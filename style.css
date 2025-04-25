@@ -5,7 +5,7 @@
   .block-header{font-size:16px!important}
 }
 /* Unified styling for floating buttons */
-  .floating-button{position:fixed;width:55px;height:55px;right:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#FFF;box-shadow:0 4px 8px rgba(0,0,0,0.3);transition:transform 0.3s ease,background-color 0.3s ease;z-index:1000;cursor:pointer;animation:bounce 2s infinite}
+  .floating-button{position:fixed;width:55px;height:55px;left:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#FFF;box-shadow:0 4px 8px rgba(0,0,0,0.3);transition:transform 0.3s ease,background-color 0.3s ease;z-index:1000;cursor:pointer;animation:bounce 2s infinite}
 /* Positioning offsets for vertical stacking */
   .floating-button.share{bottom:140px;/* Position Share button above WhatsApp */
     background-color:#2C333F}
