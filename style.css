@@ -1,7 +1,9 @@
 /* Block Header */
 .block-header{background:linear-gradient(to right,#7b2ff7,#00c6ff);color:#fff;font-size:1.8rem;font-weight:700;text-align:center;padding:8px 0;margin-bottom:15px;border-radius:12px;text-transform:uppercase;letter-spacing:1px;border:2px solid #e7e5fd;box-shadow:0 0 10px 0 rgba(0,0,0,0.5);transition:all 0.4s ease;cursor:pointer}
 .block-header:hover{color:#fff;background:linear-gradient(to right,#00c6ff,#7b2ff7);transform:scale(1.05);box-shadow:0 0 15px 4px rgba(123,47,247,0.4)}
-
+@media (max-width:600px){
+  .block-header{font-size:16px!important}
+}
 /* Sticky Ads */
 .sticky-ads{position:fixed;bottom:0;left:0;width:100%;min-height:70px;max-height:200px;padding:5px 0;box-shadow:0 -6px 18px 0 rgb(9 32 76 / 10%);-webkit-transition:all .1s ease-in;transition:all .1s ease-in;display:flex;align-items:center;justify-content:center;background-color:#fefefe;z-index:9999}
 .dark-skin .sticky-ads{background-color:#1f2024}
@@ -10,7 +12,6 @@
 .sticky-ads .sticky-ads-close svg{width:22px;height:22px;fill:#000}
 .dark-skin .sticky-ads-close svg{fill:#ccc}
 .sticky-ads .sticky-ads-content{overflow:hidden;display:flex;justify-content:center;position:relative;height:90px;width:100%;margin-right:10px;margin-left:10px;align-items:center}
-
 /* Right Side Buttons */
 .sticky-right-container{padding:0;margin:0;position:fixed;right:-130px;top:33.333%;width:200px;z-index:99999}
 .sticky-right-container ul{padding:0!important}
@@ -21,7 +22,8 @@
 .sticky-right li a{color:#fff}
 /* @media only screen and (max-width:768px){
   .sticky-right-container{top:30%}
-} */
+}
+*/
 
 /* feature Menu*/
 .feature-menu{padding:5px;text-align:center;position:relative;background:rgb(0 10 100);margin:0 0 20px 0!important;border:1px solid #1a73e8;border-radius:16px 16px 10px 10px}
@@ -39,19 +41,18 @@
 @media (max-width:1024px){
   .feature-menu{margin:0}
 }
-/* .feature-menu li:last-child{display:none} */
+/* .feature-menu li:last-child{display:none}
+*/
 @media (max-width:768px){
   .page .entry-content{padding-top:12px!important}
   .post-content.container-wrapper{margin:4px!important}
 }
-
 /* Join Me - 1 */
 .join-links{text-align:center;margin-bottom:1rem!important}
 .btn{display:inline-block;max-width:49%;font-weight:bold;margin:0.5rem;padding:0.85rem 1rem;color:white!important;border-radius:12px;text-decoration:none;font-size:1.1rem;transition:transform 0.3s ease,box-shadow 0.3s ease;box-shadow:0 4px 8px rgba(0,0,0,0.15)}
 .telegram{background:#229ED9}
 .whatsapp{background:#25D366}
 .btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,0.25)}
-
 /* Join me 2 */
  .join-block{margin:0;padding:0;font-family:Arial,sans-serif}
 /* Join Card */
@@ -67,7 +68,7 @@
 .telegram-icon{color:#0088CC}
 /* Action button styles */
     .action-btn{text-decoration:none;color:white!important;padding:8px 16px;border-radius:10px;font-weight:bold;white-space:nowrap;transition:opacity 0.3s ease,background-color 0.3s ease;/* smooth blinking effect:opacity pulsates via keyframes */
-      animation:blinker 1.2s infinite ease-in-out;max-width: -webkit-fill-available;}
+      animation:blinker 1.2s infinite ease-in-out;max-width:-webkit-fill-available}
 .action-btn:hover{animation:none;opacity:1}
 .whatsapp-link{background-color:#25d366}
 .telegram-link{background-color:#0088CC}
@@ -79,21 +80,19 @@
 }
 /* Responsive styles */
     @media (max-width:768px){
-  .join-card{flex-direction:column;align-items:center;}
+  .join-card{flex-direction:column;align-items:center}
   .action-btn{width:100%;text-align:center;margin-top:10px}
 }
-
-    
 /* Quiz Categories Grid */
 .quiz-categories{display:grid;grid-template-columns:repeat(2,1fr);/* Mobile default */
   grid-gap:15px;max-width:1200px;margin:0 auto 2rem auto;justify-content:center}
 /* Tablet - 3 columns */
 @media (min-width:600px){
-.quiz-categories{grid-template-columns:repeat(3,1fr)}
+  .quiz-categories{grid-template-columns:repeat(3,1fr)}
 }
 /* Desktop - 4 columns */
 @media (min-width:1024px){
-.quiz-categories{grid-template-columns:repeat(4,1fr)}
+  .quiz-categories{grid-template-columns:repeat(4,1fr)}
 }
 .card{background:white;padding:1.5rem;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);text-align:center;cursor:pointer;transition:transform 0.3s ease,box-shadow 0.3s ease;border:2px solid #dddfff80}
 .card:hover{transform:translateY(-5px);box-shadow:0 4px 15px rgba(0,0,0,0.2)}
@@ -105,18 +104,17 @@ footer{text-align:center;padding:1rem;background:#ddd;margin-top:3rem}
 grid-gap:15px;max-width:1200px;margin:0 auto 2rem auto;justify-content:center}
 /* Tablet - 3 columns */
 @media (min-width:600px){
-.card-categories{grid-template-columns:repeat(3,1fr)}
+  .card-categories{grid-template-columns:repeat(3,1fr)}
 }
 /* Desktop - 4 columns */
 @media (min-width:1024px){
-.card-categories{grid-template-columns:repeat(4,1fr)}
+  .card-categories{grid-template-columns:repeat(4,1fr)}
 }
 .card-big{background:white;padding:1.5rem;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);text-align:center;cursor:pointer;transition:transform 0.3s ease,box-shadow 0.3s ease;border:2px solid #dddfff80}
 .card-big:hover{transform:translateY(-5px);box-shadow:0 4px 15px rgba(0,0,0,0.2)}
 .card-big h3{margin:0;font-size:1.2rem;font-weight:bold;color:#0077cc}
 .card-big svg{width:92px;height:140px;margin:0.5rem 0;stroke:#333}
 .card-big h4{margin-top:0.5rem;margin-bottom:0;font-size:1rem;font-weight:bold;color:#555}
-
 /* Category Wrapper */
 .category-wrapper{display:grid;grid-template-columns:repeat(2,1fr);/* Mobile default */
 gap:16px;padding:0}
@@ -125,14 +123,13 @@ gap:16px;padding:0}
 .category-box:hover{border-color:#007bff;background-color:#f0f8ff;color:#007bff;box-shadow:0 4px 12px rgba(0,123,255,0.2);transform:translateY(-2px)}
 /* Tablet */
 @media (min-width:600px){
-.category-wrapper{grid-template-columns:repeat(3,1fr)}
+  .category-wrapper{grid-template-columns:repeat(3,1fr)}
 }
 /* Desktop */
 @media (min-width:1024px){
-.category-wrapper{grid-template-columns:repeat(6,1fr)}
+  .category-wrapper{grid-template-columns:repeat(6,1fr)}
 }
 .category-box:active{transform:scale(0.97)}
-
 /* ===Quiz Listing CSS=== */
 
 /* ===== Block Styling ===== */
