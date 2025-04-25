@@ -4,6 +4,53 @@
 @media (max-width:600px){
   .block-header{font-size:16px!important}
 }
+/* Unified styling for floating buttons */
+  .floating-button{position:fixed;width:55px;height:55px;right:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#FFF;box-shadow:0 4px 8px rgba(0,0,0,0.3);transition:transform 0.3s ease,background-color 0.3s ease;z-index:1000;cursor:pointer;animation:bounce 2s infinite}
+/* Positioning offsets for vertical stacking */
+  .floating-button.share{bottom:140px;/* Position Share button above WhatsApp */
+    background-color:#2C333F}
+.floating-button.whatsapp{bottom:70px;/* WhatsApp button lower on the screen */
+    background-color:#25D366}
+/* Hover effects:scaling,rotating,and color change */
+  .floating-button:hover{transform:scale(1.15) rotate(-3deg);box-shadow:0 8px 12px rgba(0,0,0,0.4)}
+/* Unique color change on hover */
+  .floating-button.whatsapp:hover{background-color:#1EBE57}
+.floating-button.share:hover{background-color:#3A4550}
+/* Bounce animation for both buttons */
+  @keyframes bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+/* SVG icon styling */
+  .floating-button svg{width:26px;height:26px;fill:currentColor}
+/* Responsive Styling for Mobile & Tablet */
+          @media (max-width:768px){
+  .floating-button{left:20px!important}
+}
+/* Global Styles for Cookie Popup */
+          .cookie-consent-popup{position:fixed;bottom:0;left:0;right:0;background-color:#333;color:white;padding:20px;text-align:center;z-index:9999;display:none;font-size:16px;box-shadow:0 -4px 8px rgba(0,0,0,0.2);font-family:'Arial',sans-serif}
+.cookie-consent-popup .cookie-consent-content{max-width:1000px;margin:0 auto}
+.cookie-consent-popup p{margin:8px 0;line-height:1.6}
+.cookie-consent-popup a{color:#f1c40f;text-decoration:none;font-weight:bold}
+.cookie-consent-popup .cookie-accept-btn{background-color:#f1c40f;color:#333;border:none;padding:12px 24px;cursor:pointer;font-size:16px;border-radius:5px;margin-top:15px;transition:background-color 0.3s ease;display:inline-block}
+.cookie-consent-popup .cookie-accept-btn:hover{background-color:#e67e22}
+/* Responsive Styling for Mobile & Tablet */
+          @media (max-width:768px){
+  .cookie-consent-popup{font-size:14px;padding:15px}
+  .cookie-consent-popup .cookie-accept-btn{font-size:14px;padding:10px 20px}
+}
+/* Styling for Small Devices (Smartphones) */
+          @media (max-width:480px){
+  .cookie-consent-popup{font-size:12px;padding:12px}
+  .cookie-consent-popup .cookie-accept-btn{font-size:13px;padding:8px 16px}
+  .cookie-consent-popup p{font-size:14px}
+  .cookie-consent-popup a{font-size:14px}
+}
+/* Large Devices (Desktops) */
+          @media (min-width:1200px){
+  .cookie-consent-popup{font-size:18px;padding:20px 40px}
+  .cookie-consent-popup .cookie-accept-btn{font-size:18px;padding:15px 30px}
+}
 /* Sticky Ads */
 .sticky-ads{position:fixed;bottom:0;left:0;width:100%;min-height:70px;max-height:200px;padding:5px 0;box-shadow:0 -6px 18px 0 rgb(9 32 76 / 10%);-webkit-transition:all .1s ease-in;transition:all .1s ease-in;display:flex;align-items:center;justify-content:center;background-color:#fefefe;z-index:9999}
 .dark-skin .sticky-ads{background-color:#1f2024}
