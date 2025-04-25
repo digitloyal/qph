@@ -134,10 +134,10 @@ gap:16px;padding:0}
 
 /* ===Quiz Listing CSS=== */
 /* ===== Block Styling ===== */
-.qna-block{font-family:'Segoe UI',sans-serif;background-color:#f4f4f4;color:var(--text-color);padding:2rem;display:flex;flex-direction:column;align-items:center}
+.qna-block{border-radius:10px!important;font-family:'Segoe UI',sans-serif;background-color:#f4f4f4;color:var(--text-color);padding:2rem;display:flex;flex-direction:column;align-items:center}
 /* ===== Filters Section ===== */
-  .filters{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;justify-content:center;font-family:'Segoe UI',sans-serif}
-.filters input[type="text"],.filters select{padding:0.8rem 1rem;border:2px solid #ccc;border-radius:10px;font-size:1rem;font-family:'Segoe UI',sans-serif}
+.filters input[type="text"],.filters select{padding:0.8rem 1rem!important;border:2px solid #ccc;border-radius:10px!important;font-size:1rem!important;min-width:-webkit-fill-available!important}
+.filters{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;justify-content:center;font-family:'Segoe UI',sans-serif}
 /* ===== Reset Button ===== */
   .reset-button{padding:0.7rem 1.2rem;margin-bottom:2rem;background-color:#ff4d4f;color:white;border:none;border-radius:10px;font-size:1rem;cursor:pointer;transition:background-color 0.3s ease;font-family:'Segoe UI',sans-serif}
 .reset-button:hover{background-color:#e63a3c}
