@@ -231,6 +231,8 @@ gap:16px;padding:0}
   .simple-quiz-card{padding:1rem!important}
   .simple-quiz-title{font-size:1.2rem!important}
 }
+
+/* === UNIQUE STYLES FOR MOTIVATIONAL TEXT SLIDER === */
 /* Wrapper for the entire slider */
 .custom-slider-wrapper{position:relative;max-width:100%;border-radius:10px;overflow:hidden;font-family:'Segoe UI',Roboto,sans-serif}
 /* Slider container */
@@ -274,4 +276,28 @@ gap:16px;padding:0}
   .custom-text{font-size:1.1rem}
   .custom-glass{padding:20px}
   .custom-controls button{font-size:1rem;padding:6px 10px}
+}
+
+/* === UNIQUE STYLES FOR MOTIVATIONAL IMAGE SLIDER === */
+/* Main slider container */
+.imgslider-slider{position:relative;width:-webkit-fill-available;max-width:700px;height:520px;margin:20px auto;overflow:hidden;border-radius:10px;box-shadow:0 0 20px rgba(0,0,0,0.2);background:rgba(255,255,255,0.5);/* frosted glass effect */
+  backdrop-filter:blur(10px);/* Apply blur to the background */
+  box-shadow:0 4px 6px rgba(0,0,0,0.2)}
+/* Individual image slides */
+.imgslider-slide{width:100%;height:100%;background-size:cover;background-position:center;position:absolute;opacity:0;transition:opacity 0.5s ease}
+/* Active slide */
+.imgslider-slide.imgslider-active{opacity:1;z-index:1}
+/* Controls wrapper */
+.imgslider-controls{text-align:center;margin-top:10px}
+/* Control buttons */
+.imgslider-controls button{font-size:20px;padding:10px 15px;margin:0 5px;cursor:pointer;border:none;background:#333;color:white;border-radius:6px;transition:background 0.3s ease}
+.imgslider-controls button:hover{background:#555}
+/* === RESPONSIVE DESIGN === */
+@media screen and (max-width:768px){
+  .imgslider-slider{max-width:90%;height:350px}
+  .imgslider-controls button{font-size:18px;padding:8px 12px}
+}
+@media screen and (max-width:480px){
+  .imgslider-slider{max-width:100%;height:300px}
+  .imgslider-controls button{font-size:16px;padding:7px 10px}
 }
