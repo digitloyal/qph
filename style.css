@@ -277,22 +277,14 @@ gap:16px;padding:0}
   .custom-controls button{font-size:1rem;padding:6px 10px}
 }
 
-/* Main container for the slider */
-.custom-slider{position:relative;width:-webkit-fill-available;/* Responsive width */
-    max-width:700px;/* Max width */
-    height:520px;/* Fixed height */
-    margin:20px auto;/* Center horizontally */
-    overflow:hidden;/* Hide overflowing content */
-    border-radius:10px;/* Rounded corners */
-    box-shadow:0 0 20px rgba(0,0,0,0.2);/* Subtle shadow */}
-/* Individual slide */
-.custom-slide{width:100%;height:100%;background-size:cover;/* Cover full slide */
-  background-position:center;/* Center image */
-  position:absolute;opacity:0;/* Hidden by default */
-  transition:opacity 0.5s ease;/* Smooth fade transition */}
-/* Active slide (visible) */
-.custom-slide.active{opacity:1;z-index:1}
-/* Button container */
-.custom-controls{text-align:center;margin-top:10px}
-/* Control buttons styling */
-.custom-controls button{font-size:20px;padding:10px 15px;margin:0 5px;cursor:pointer}
+<!-- === UNIQUE STYLES FOR MOTIVATIONAL IMAGE SLIDER === -->
+/* Main slider container */
+.imgslider-slider{position:relative;width:-webkit-fill-available;max-width:700px;height:520px;margin:20px auto;overflow:hidden;border-radius:10px;box-shadow:0 0 20px rgba(0,0,0,0.2)}
+/* Each individual slide */
+.imgslider-slide{width:100%;height:100%;background-size:cover;background-position:center;position:absolute;opacity:0;transition:opacity 0.5s ease}
+/* Visible slide */
+.imgslider-slide.imgslider-active{opacity:1;z-index:1}
+/* Control button container */
+.imgslider-controls{text-align:center;margin-top:10px}
+/* Control buttons */
+.imgslider-controls button{font-size:20px;padding:10px 15px;margin:0 5px;cursor:pointer}
