@@ -60,7 +60,7 @@
 .dark-skin .sticky-ads-close svg{fill:#ccc}
 .sticky-ads .sticky-ads-content{overflow:hidden;display:flex;justify-content:center;position:relative;height:90px;width:100%;margin-right:10px;margin-left:10px;align-items:center}
 /* Right Side Buttons */
-.sticky-right-container{padding:0;margin:0;position:fixed;right:-130px;top:33.333%;width:200px;z-index:99999}
+.sticky-right-container{padding:0;margin:0;position:fixed;right:-152px;top:33.333%;width:200px;z-index:99999}
 .sticky-right-container ul{padding:0!important}
 .sticky-right li{list-style-type:none!important;background-color:none!important;color:#efefef;height:43px;padding:0;margin:0 0 1px 0;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out;cursor:pointer}
 .sticky-right li:hover{margin-left:-150px;background:#333;border-radius:25px 0 0 25px}
