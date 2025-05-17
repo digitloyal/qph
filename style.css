@@ -322,3 +322,46 @@ gap:16px;padding:0}
 .footer-branding{font-size:12px;color:#666;margin-top:15px}
 .footer-branding a{color:#6a5acd;text-decoration:none;font-weight:bold}
 .footer-branding a:hover{text-decoration:underline}
+
+/* Header Ad Banner */
+.header-ad-banner{margin-top:16px;margin-bottom:16px;background-color:#4CAF50;/* Green background */
+color:white;display:flex;justify-content:center;align-items:center;padding:20px 0;font-family:Arial,sans-serif;animation:slideIn 1s ease-out;/* Slide-in animation */
+width:52%;position:relative;border-radius:6px}
+.ad-content{display:flex;justify-content:space-between;align-items:center;width:92%;max-width:1200px;position:relative}
+.ad-icon{font-size:30px;margin-right:10px;color:yellow;animation:bounce 1s infinite;/* Bouncing effect on the icon */}
+.ad-text{font-size:22px;flex-grow:1;font-weight:bold;text-align:center;margin:0;opacity:0;animation:fadeInText 1.5s forwards;/* Fade-in animation for text */}
+.ad-button{padding:10px 20px;background-color:#FF5722;color:white;text-decoration:none;border-radius:5px;font-weight:bold;transition:background-color 0.3s ease,transform 0.3s ease;opacity:0;animation:fadeInButton 2s forwards 0.5s;/* Fade-in animation for button */}
+.ad-button:hover{background-color:#E64A19;transform:scale(1.1);/* Hover effect to scale the button */}
+/* Slide-in animation */
+@keyframes slideIn{
+  from{transform:translateY(-100%)}
+  to{transform:translateY(0)}
+}
+/* Bouncing effect for icon */
+@keyframes bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+/* Fade-in animation for text */
+@keyframes fadeInText{
+  0%{opacity:0}
+  100%{opacity:1}
+}
+/* Fade-in animation for button */
+@keyframes fadeInButton{
+  0%{opacity:0}
+  100%{opacity:1}
+}
+/* Responsive Layout */
+@media (max-width:768px){
+  .header-ad-banner{flex-direction:column;padding:15px 0;width:92%}
+  .ad-content{width:90%;flex-direction:column;text-align:center}
+  .ad-icon{font-size:40px;margin-bottom:10px}
+  .ad-text{font-size:18px;margin:10px 0}
+  .ad-button{width:100%;margin-top:10px}
+}
+@media (max-width:480px){
+  .header-ad-banner{padding:10px 0;width:92%}
+  .ad-text{font-size:16px}
+  .ad-button{font-size:14px;padding:8px 16px}
+}
