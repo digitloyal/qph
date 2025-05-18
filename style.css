@@ -51,14 +51,6 @@
   .cookie-consent-popup{font-size:18px;padding:20px 40px}
   .cookie-consent-popup .cookie-accept-btn{font-size:18px;padding:15px 30px}
 }
-/* Sticky Ads */
-.sticky-ads{position:fixed;bottom:0;left:0;width:100%;min-height:70px;max-height:200px;padding:5px 0;box-shadow:0 -6px 18px 0 rgb(9 32 76 / 10%);-webkit-transition:all .1s ease-in;transition:all .1s ease-in;display:flex;align-items:center;justify-content:center;background-color:#fefefe;z-index:9999}
-.dark-skin .sticky-ads{background-color:#1f2024}
-.sticky-ads-close{width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:22px 22px 0 0;position:absolute;left:0;top:-28px;background-color:#fafafa;box-shadow:0 -6px 18px 0 #09204c14}
-.dark-skin .sticky-ads-close{background-color:#1f2024}
-.sticky-ads .sticky-ads-close svg{width:22px;height:22px;fill:#000}
-.dark-skin .sticky-ads-close svg{fill:#ccc}
-.sticky-ads .sticky-ads-content{overflow:hidden;display:flex;justify-content:center;position:relative;height:90px;width:100%;margin-right:10px;margin-left:10px;align-items:center}
 /* Right Side Buttons */
 .sticky-right-container{padding:0;margin:0;position:fixed;right:-152px;top:33.333%;width:200px;z-index:99999}
 .sticky-right-container ul{padding:0!important}
