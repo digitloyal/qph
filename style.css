@@ -119,7 +119,7 @@ animation:none;/* Pause pulse on hover */}
 }
 /* Join Me */
 #join-links-section{text-align:center!important;margin:1rem auto!important}
-#join-telegram,#join-whatsapp{display:inline-block!important;width:48%!important;margin:0.5rem!important;padding:0.85rem 1rem!important;font-size:1.1rem!important;font-weight:bold!important;color:#fff!important;text-decoration:none!important;border-radius:12px!important;box-shadow:0 4px 8px rgba(0,0,0,0.15)!important;transition:transform 0.3s ease,box-shadow 0.3s ease!important}
+#join-telegram,#join-whatsapp{display:inline-block!important;width:44%!important;margin:0.5rem!important;padding:0.85rem 1rem!important;font-size:1.1rem!important;font-weight:bold!important;color:#fff!important;text-decoration:none!important;border-radius:12px!important;box-shadow:0 4px 8px rgba(0,0,0,0.15)!important;transition:transform 0.3s ease,box-shadow 0.3s ease!important}
 #join-telegram{background-color:#229ED9!important}
 #join-whatsapp{background-color:#25D366!important}
 #join-telegram:hover,#join-whatsapp:hover{transform:translateY(-2px)!important;box-shadow:0 6px 16px rgba(0,0,0,0.25)!important}
