@@ -134,8 +134,8 @@ animation:none;/* Pause pulse on hover */}
 /* SVG Icon styling */
     .icon{width:32px;height:32px;flex-shrink:0;transition:transform 0.3s ease}
 .join-card:hover .icon{transform:scale(1.1)}
-.whatsapp-icon{color:#25D366}
-.telegram-icon{color:#0088CC}
+.whatsapp-icon{fill:#fff!important;background-color:#25D366;padding:4px;border-radius:10px!important}
+.telegram-icon{fill:#fff!important;background-color:#0088CC;padding:4px;border-radius:10px!important}
 /* Action button styles */
     .action-btn{text-decoration:none;color:white!important;padding:8px 16px;border-radius:10px;font-weight:bold;white-space:nowrap;transition:opacity 0.3s ease,background-color 0.3s ease;/* smooth blinking effect:opacity pulsates via keyframes */
       animation:blinker 1.2s infinite ease-in-out;max-width:-webkit-fill-available}
