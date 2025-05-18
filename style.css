@@ -51,18 +51,44 @@
   .cookie-consent-popup{font-size:18px;padding:20px 40px}
   .cookie-consent-popup .cookie-accept-btn{font-size:18px;padding:15px 30px}
 }
-/* Right Side Buttons */
-.sticky-right-container{padding:0;margin:0;position:fixed;right:-152px;top:33.333%;width:200px;z-index:99999}
-.sticky-right-container ul{padding:0!important}
-.sticky-right li{list-style-type:none!important;background-color:none!important;color:#efefef;height:43px;padding:0;margin:0 0 1px 0;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out;cursor:pointer}
-.sticky-right li:hover{margin-left:-150px;background:#333;border-radius:25px 0 0 25px}
-.sticky-right li img{float:left;border-radius:0;margin:5px 5px;margin-left:10px;transition:all .3s ease;-webkit-animation:digitloyalRing 5s 0s ease-in-out infinite;-webkit-transform-origin:50% 4px;-moz-animation:digitloyalRing 5s 0s ease-in-out infinite;-moz-transform-origin:50% 4px;animation:digitloyalRing 5s 0s ease-in-out infinite;transform-origin:50% 4px}
-.sticky-right li p{padding:0;float:left;margin:0;text-transform:uppercase;line-height:43px}
-.sticky-right li a{color:#fff}
-/* @media only screen and (max-width:768px){
-  .sticky-right-container{top:30%}
+
+/* Social Icon Bar Container */
+.social-bar{position:fixed;top:50%;right:0;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;z-index:1000;padding:10px}
+/* Individual Social Icon */
+.social-icon{display:flex;align-items:center;justify-content:center;width:50px;height:50px;margin:8px 0;background-color:#ffffff;border-radius:50%;box-shadow:0 4px 8px rgba(0,0,0,0.2);transition:transform 0.3s ease,background-color 0.3s ease,box-shadow 0.3s ease;cursor:pointer;text-decoration:none;overflow:hidden;animation:pulse 2s infinite ease-in-out}
+/* Pulse Animation */
+@keyframes pulse{
+  0%{transform:scale(1);box-shadow:0 4px 8px rgba(0,0,0,0.2)}
+  50%{transform:scale(1.1);box-shadow:0 6px 12px rgba(0,0,0,0.3)}
+  100%{transform:scale(1);box-shadow:0 4px 8px rgba(0,0,0,0.2)}
 }
-*/
+/* Icon Styling */
+.social-icon svg{width:24px;height:24px;fill:#333;transition:fill 0.3s ease}
+/* Hover Effects */
+.social-icon:hover{transform:scale(1.2);box-shadow:0 6px 12px rgba(0,0,0,0.3);animation:none;/* Pause pulse on hover */}
+.social-icon.whatsapp:hover{background-color:#25D366}
+.social-icon.whatsapp:hover svg{fill:#ffffff}
+.social-icon.telegram:hover{background-color:#0088cc}
+.social-icon.telegram:hover svg{fill:#ffffff}
+.social-icon.xcom:hover{background-color:#000000}
+.social-icon.xcom:hover svg{fill:#ffffff}
+.social-icon.instagram:hover{background-color:#E1306C}
+.social-icon.instagram:hover svg{fill:#ffffff}
+.social-icon.youtube:hover{background-color:#FF0000}
+.social-icon.youtube:hover svg{fill:#ffffff}
+.social-icon.facebook:hover{background-color:#3b5998}
+.social-icon.facebook:hover svg{fill:#ffffff}
+/* Responsive Design */
+@media (max-width:768px){
+  .social-bar{right:10px;padding:5px}
+  .social-icon{width:40px;height:40px;margin:6px 0}
+  .social-icon svg{width:20px;height:20px}
+}
+@media (max-width:480px){
+  .social-bar{right:5px}
+  .social-icon{width:35px;height:35px;margin:5px 0}
+  .social-icon svg{width:18px;height:18px}
+}
 
 /* feature Menu*/
 .feature-menu{padding:5px;text-align:center;position:relative;background:rgb(0 10 100);margin:0 0 20px 0!important;border:1px solid #1a73e8;border-radius:16px 16px 10px 10px}
@@ -203,8 +229,8 @@ gap:16px;padding:0}
 @media (max-width:600px){
   .custom-title{font-size:2rem!important}
 }
-/* Web Page Quiz Listing CSS */
 
+/* Web Page Quiz Listing CSS */
 /* Grid Layout for Cards */
     .simple-quiz-grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))!important;gap:1.5rem!important;width:100%!important;max-width:1000px!important}
 /* Quiz Card Styling */
