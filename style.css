@@ -63,7 +63,7 @@
   100%{transform:scale(1);box-shadow:0 4px 8px rgba(0,0,0,0.2)}
 }
 /* Icon Styling */
-.social-icon svg{width:36px;height:36px;fill:#ffffff;transition:fill 0.3s ease}
+.social-icon svg{width:28px;height:28px;fill:#ffffff;transition:fill 0.3s ease}
 /* Brand Background Colors */
 .social-icon.whatsapp{background-color:#25D366}
 .social-icon.telegram{background-color:#0088cc}
@@ -87,7 +87,7 @@ animation:none;/* Pause pulse on hover */}
 @media (max-width:768px){
   .social-bar{right:10px;padding:5px}
   .social-icon{width:40px;height:40px;margin:6px 0}
-  .social-icon svg{width:28px;height:28px}
+  .social-icon svg{width:22px;height:22px}
 }
 @media (max-width:480px){
   .social-bar{right:5px}
