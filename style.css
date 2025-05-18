@@ -55,7 +55,7 @@
 /* Social Icon Bar Container */
 .social-bar{position:fixed;top:50%;right:0;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;z-index:1000;padding:10px}
 /* Individual Social Icon */
-.social-icon{display:flex;align-items:center;justify-content:center;width:50px;height:50px;margin:8px 0;background-color:#ffffff;border-radius:50%;box-shadow:0 4px 8px rgba(0,0,0,0.2);transition:transform 0.3s ease,background-color 0.3s ease,box-shadow 0.3s ease;cursor:pointer;text-decoration:none;overflow:hidden;animation:pulse 2s infinite ease-in-out}
+.social-icon{display:flex;align-items:center;justify-content:center;width:50px;height:50px;margin:8px 0;border-radius:50%;box-shadow:0 4px 8px rgba(0,0,0,0.2);transition:transform 0.3s ease,background-color 0.3s ease,box-shadow 0.3s ease,rotate 0.3s ease;cursor:pointer;text-decoration:none;overflow:hidden;animation:pulse 2s infinite ease-in-out}
 /* Pulse Animation */
 @keyframes pulse{
   0%{transform:scale(1);box-shadow:0 4px 8px rgba(0,0,0,0.2)}
@@ -63,21 +63,26 @@
   100%{transform:scale(1);box-shadow:0 4px 8px rgba(0,0,0,0.2)}
 }
 /* Icon Styling */
-.social-icon svg{width:24px;height:24px;fill:#333;transition:fill 0.3s ease}
+.social-icon svg{width:42px;height:42px;fill:#ffffff;transition:fill 0.3s ease}
+/* Brand Background Colors */
+.social-icon.whatsapp{background-color:#25D366}
+.social-icon.telegram{background-color:#0088cc}
+.social-icon.xcom{background-color:#000000}
+.social-icon.instagram{background-color:#E1306C}
+.social-icon.youtube{background-color:#FF0000}
+.social-icon.facebook{background-color:#3b5998}
 /* Hover Effects */
-.social-icon:hover{transform:scale(1.2);box-shadow:0 6px 12px rgba(0,0,0,0.3);animation:none;/* Pause pulse on hover */}
-.social-icon.whatsapp:hover{background-color:#25D366}
-.social-icon.whatsapp:hover svg{fill:#ffffff}
-.social-icon.telegram:hover{background-color:#0088cc}
-.social-icon.telegram:hover svg{fill:#ffffff}
-.social-icon.xcom:hover{background-color:#000000}
-.social-icon.xcom:hover svg{fill:#ffffff}
-.social-icon.instagram:hover{background-color:#E1306C}
-.social-icon.instagram:hover svg{fill:#ffffff}
-.social-icon.youtube:hover{background-color:#FF0000}
-.social-icon.youtube:hover svg{fill:#ffffff}
-.social-icon.facebook:hover{background-color:#3b5998}
-.social-icon.facebook:hover svg{fill:#ffffff}
+.social-icon:hover{transform:scale(1.2) rotate(15deg);/* Slight rotation for dynamic effect */
+box-shadow:0 8px 16px rgba(0,0,0,0.4),0 0 20px rgba(255,255,255,0.5);/* Glowing effect */
+animation:none;/* Pause pulse on hover */}
+.social-icon.whatsapp:hover{background-color:#2ee678;/* Brighter WhatsApp green */}
+.social-icon.telegram:hover{background-color:#00aaff;/* Brighter Telegram blue */}
+.social-icon.xcom:hover{background-color:#333333;/* Lighter black for X */}
+.social-icon.instagram:hover{background-color:#ff4d87;/* Brighter Instagram pink */}
+.social-icon.youtube:hover{background-color:#ff3333;/* Brighter YouTube red */}
+.social-icon.facebook:hover{background-color:#4c70ba;/* Brighter Facebook blue */}
+/* Keep white icons on hover */
+.social-icon:hover svg{fill:#ffffff}
 /* Responsive Design */
 @media (max-width:768px){
   .social-bar{right:10px;padding:5px}
